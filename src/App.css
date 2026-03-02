@@ -1,0 +1,104 @@
+/* ── Layout ─────────────────────────────────────────── */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #e8eaf6 0%, #f0f2f5 100%);
+  box-sizing: border-box;
+}
+
+/* ── Card ───────────────────────────────────────────── */
+.form-card {
+  background: #ffffff;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1.25rem, 4vw, 2rem);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+/* ── Heading ────────────────────────────────────────── */
+.form-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.3rem, 4vw, 1.7rem);
+  color: #1a1a2e;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+/* ── Labels & Inputs ────────────────────────────────── */
+.form-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  font-weight: 600;
+  color: #444;
+}
+
+.form-card input {
+  padding: clamp(0.5rem, 2vw, 0.65rem) clamp(0.65rem, 2vw, 0.85rem);
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  font-family: inherit;
+  color: #222;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card input:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.15);
+}
+
+/* ── Submit Button ──────────────────────────────────── */
+.form-card button[type='submit'] {
+  padding: clamp(0.6rem, 2.5vw, 0.75rem);
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.form-card button[type='submit']:hover {
+  background-color: #535bf2;
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.35);
+}
+
+.form-card button[type='submit']:active {
+  transform: scale(0.98);
+}
+
+/* ── Mobile (≤ 480 px) ──────────────────────────────── */
+@media (max-width: 480px) {
+  .form-card {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ── Tiny screens (≤ 320 px) ────────────────────────── */
+@media (max-width: 320px) {
+  .app-wrapper {
+    padding: 0.5rem;
+  }
+
+  .form-card {
+    padding: 1.25rem 1rem;
+  }
+}
