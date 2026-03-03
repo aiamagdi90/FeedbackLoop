@@ -1,21 +1,31 @@
 import { useState } from 'react';
 
+const emptyForm = { username: '', email: '', password: '', address: '' };
+
 export default function SubmitForm() {
-  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+  const [formData, setFormData] = useState(emptyForm);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
+    setSubmitted(false);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted:', formData);
-    alert(`Submitted!\nUsername: ${formData.username}\nEmail: ${formData.email}`);
+    setFormData(emptyForm);
+    setSubmitted(true);
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-card">
       <h2>Register</h2>
+
+      {submitted && (
+        <p className="form-success">Registration successful!</p>
+      )}
+
       <label>
         Username
         <input
@@ -34,7 +44,7 @@ export default function SubmitForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Enter email"
+          placeholder="Email"
           required
         />
       </label>
@@ -45,7 +55,18 @@ export default function SubmitForm() {
           name="password"
           value={formData.password}
           onChange={handleChange}
-          placeholder="Enter password"
+          placeholder="Password"
+          required
+        />
+      </label>
+      <label>
+        Address
+        <input
+          type="text"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          placeholder="Address"
           required
         />
       </label>
