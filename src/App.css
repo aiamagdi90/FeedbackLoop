@@ -84,6 +84,19 @@
   transform: scale(0.98);
 }
 
+/* ── Success message ────────────────────────────────── */
+.form-success {
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  background: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* ── Mobile (≤ 480 px) ──────────────────────────────── */
 @media (max-width: 480px) {
   .form-card {
