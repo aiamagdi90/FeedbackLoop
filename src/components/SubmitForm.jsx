@@ -15,7 +15,7 @@ export default function SubmitForm() {
 
   return (
     <form onSubmit={handleSubmit} className="form-card">
-      <h2>Register</h2>
+      <h2>Registerssss</h2>
       <label>
         Username
         <input
