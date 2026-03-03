@@ -34,7 +34,7 @@ export default function SubmitForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Enter email"
+          placeholder="Email"
           required
         />
       </label>
@@ -42,10 +42,10 @@ export default function SubmitForm() {
         Password
         <input
           type="password"
-          name="password"
+          name="assword"
           value={formData.password}
           onChange={handleChange}
-          placeholder="Enter password"
+          placeholder="Password"
           required
         />
       </label>
@@ -56,7 +56,7 @@ export default function SubmitForm() {
           name="address"
           value={formData.address}
           onChange={handleChange}
-          placeholder="Enter address"
+          placeholder="Address"
           required
         />
       </label>
