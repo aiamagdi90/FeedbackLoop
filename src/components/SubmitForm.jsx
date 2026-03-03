@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function SubmitForm() {
-  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+  const [formData, setFormData] = useState({ username: '', email: '', password: '' , address: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,7 +15,7 @@ export default function SubmitForm() {
 
   return (
     <form onSubmit={handleSubmit} className="form-card">
-      <h2>Registerssss</h2>
+      <h2>Register</h2>
       <label>
         Username
         <input
@@ -46,6 +46,17 @@ export default function SubmitForm() {
           value={formData.password}
           onChange={handleChange}
           placeholder="Enter password"
+          required
+        />
+      </label>
+      <label>
+        Password
+        <input
+          type="text"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          placeholder="Enter address"
           required
         />
       </label>
