@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #e8eaf6 0%, #f0f2f5 100%);
+  background: linear-gradient(135deg, #868db4 0%, #f0f2f5 100%);
   box-sizing: border-box;
 }
 
@@ -26,7 +26,7 @@
 .form-card h2 {
   margin: 0 0 0.25rem;
   font-size: clamp(1.3rem, 4vw, 1.7rem);
-  color: #3a3ab3;
+  color: #6e6eac;
   text-align: center;
   letter-spacing: -0.3px;
 }
