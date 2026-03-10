@@ -33,7 +33,7 @@ export default function SubmitForm() {
           name="username"
           value={formData.username}
           onChange={handleChange}
-          placeholder="Enter username"
+          placeholder="username"
           required
         />
       </label>
