@@ -72,7 +72,7 @@ export default function SubmitForm() {
       </label>
 
         <label>
-        Address
+        Post Code
         <input
           type="text"
           name="postcode"
