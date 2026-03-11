@@ -78,7 +78,7 @@ export default function SubmitForm() {
           name="postcode"
           value={formData.postcode}
           onChange={handleChange}
-          placeholder="postcode"
+          placeholder="Post code"
           required
         />
       </label>
