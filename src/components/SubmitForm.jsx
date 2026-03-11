@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const emptyForm = { username: '', email: '', password: '', address: '' };
+const emptyForm = { username: '', email: '', password: '', address: ''  , postcode:''};
 
 export default function SubmitForm() {
   const [formData, setFormData] = useState(emptyForm);
@@ -33,7 +33,7 @@ export default function SubmitForm() {
           name="username"
           value={formData.username}
           onChange={handleChange}
-          placeholder="Enter username"
+          placeholder="username"
           required
         />
       </label>
@@ -67,6 +67,18 @@ export default function SubmitForm() {
           value={formData.address}
           onChange={handleChange}
           placeholder="Address"
+          required
+        />
+      </label>
+
+        <label>
+        Post Code
+        <input
+          type="text"
+          name="postcode"
+          value={formData.postcode}
+          onChange={handleChange}
+          placeholder="postcode"
           required
         />
       </label>
